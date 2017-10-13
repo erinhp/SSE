@@ -51,13 +51,13 @@ If you find SSE useful in your research, please consider citing:
 ```  
 ```Java
     ./build/tools/caffe train \
-    --solver = script/SSE-ResNet/SSE-resnet-50_train_solver.prototxt  \
+    --solver = script/SSE-DenseNet/SSE-densenet-121_train.prototxt  \
     --weights = models/pretrained_model/DenseNet_121.caffemodel \
     --gpu = 0 
 ```    
 4. Test SSE with Emotion Challenge dataset  
-    Now we provide three models for testing the Emotion Challenge dataset. To use demo you need to download our pretrained SSE models, please download the model manually from [BaiduYun](https://pan.baidu.com/s/1cdJvGi), and put it under $models.  
-	You can use the command in test_HoloNet.sh like this to get face emotion recognition result for each frame:
+    Now we provide three models for testing the Emotion Challenge dataset. To use demo you need to download our pretrained SSE models, please download the model manually from [BaiduYun](https://pan.baidu.com/s/1cdJvGi), and put it under `$models`.  
+	You can use the command in test_SSE_HoloNet.sh like this to get face emotion recognition result for each frame:
 ```
    #extract features leveldb
    rm -r examples/sse_holonet_features/ && ./build/tools/extract_features.bin models/SSE/SSE_HoloNet_trval_iter_69500.caffemodel script/SSE-HoloNet/SSE_holonet_test.prototxt prob examples/sse_holonet_features 215 leveldb GPU
