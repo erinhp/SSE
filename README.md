@@ -18,7 +18,8 @@ If you find SSE useful in your research, please consider citing:
   HoloNet | 40.9922 | 44.2839 | 46.4752 | 41.4308 | 43.6031
   ResNet-50 | 41.7755 | \ | \ | \ | 42.5587
   
-## Total recognition accuracy of our best submission to Emotion Challenge 2017
+## Recognition accuracy of our best submission to Emotion Challenge 2017   
+  For the best submition to Emotion in the wild Challenge 2017, We fused the results on test set from five models. In folder `submitted_predictions_emotiw2107`, you can find the corresponding predictions for each model and ensemble predictions. We also provide test video list for evaluation.  
   Validation(%) | Test(%) |	Methods
   ------------- | ------------- | -------------
   59.01 | 60.34 | 7th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 hand-crafted model + 1 audio model
@@ -51,7 +52,7 @@ If you find SSE useful in your research, please consider citing:
    cd leveldb2mat/ && python leveldb2mat.py ../../examples/sse_holonet_features/ 215 27 7 features.mat
 ```
 4. Train SSE with Emotion Challenge dataset  
-   Train a SSE learning Strategy network. For example, train SSE-HoloNet on Emotion Challange train dataset. To train SSE-DenseNet or SSE-ResNet, you can finetune with the pretrained DenseNet/ResNet models. You can find the pretrained DenseNet_121, ResNet_50 models on [BaiduYun](https://pan.baidu.com/s/1cdJvGi) 
+   Train a SSE learning Strategy network. Here is the codes in train_SSE_XXX.sh. For example, train SSE-HoloNet on Emotion Challange train dataset. To train SSE-DenseNet or SSE-ResNet, you can finetune with their original pretrained DenseNet/ResNet models [ResNet_50](https://github.com/KaimingHe/deep-residual-networks) [DenseNet_121] (https://github.com/liuzhuang13/DenseNet). 
 ```Java
     ./build/tools/caffe train \
     --solver = script/SSE-HoloNet/SSE_holonet_train_solver.prototxt
