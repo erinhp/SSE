@@ -10,13 +10,6 @@ If you find SSE useful in your research, please consider citing:
     Year = {2017} 
 }
 ```
-## Total recognition accuracy of our top 4 submissions to Emotion Challenge 2017
-  Validation(%) | Test(%) |	Methods
-  ------------- | ------------- | -------------
-  54.57 | 55.74 | 3rd Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 audio model 
-  55.09 | 56.66 | 5th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 audio model
-  56.14 | 57.58 | 6th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 hand-crafted model + 1 audio model
-  59.01 | 60.34 | 7th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 hand-crafted model + 1 audio model
 
 ## Result comparison of our SSE networks on the Emotion Challenge validation set (%)  
   Methods | Original | 3conv-s + Eltwise | 3conv-s + Concat | 4conv-c + Eltwise | 4conv-c + Concat
@@ -24,6 +17,11 @@ If you find SSE useful in your research, please consider citing:
   DenseNet-121 | 41.3594 | 44.1253 | 45.6919 | 43. 5625 | 44.6719
   HoloNet | 40.9922 | 44.2839 | 46.4752 | 41.4308 | 43.6031
   ResNet-50 | 41.7755 | \ | \ | \ | 42.5587
+  
+## Total recognition accuracy of our best submission to Emotion Challenge 2017
+  Validation(%) | Test(%) |	Methods
+  ------------- | ------------- | -------------
+  59.01 | 60.34 | 7th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 hand-crafted model + 1 audio model
 
 ## SSE Installation
 0. Clone the SSE repository 
