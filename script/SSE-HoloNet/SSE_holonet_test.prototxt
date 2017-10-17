@@ -1,21 +1,17 @@
 name: "sse_holonet_test"
 layer {
   name: "data"
-  type: "Data"
+  type: "ImageData"
   top: "data"
   top: "label"
-  include {
-    phase: TEST
-  }
   transform_param {
     mirror: false
     crop_size: 0
     mean_file: "data/EmotiW_3_norm/EmotiW_3_norm_mean.binaryproto"
   }
-  data_param {
-    source: "examples/EmotiW_3_norm/EmotiW_3_norm_val_lmdb"
+  image_data_param {
+    source: "data/Emoti2017/EmotiW_3_norm/test_file_list.txt"
     batch_size: 128
-    backend: LMDB
   }
 }
 
@@ -2213,6 +2209,13 @@ layer {
     weight_filler { type: "xavier" }
     bias_filler { type: "constant"  value: 0.1 }
   }
+}
+
+layer {
+  name: "prob"
+  type: "Softmax"
+  bottom: "fc_fused"
+  top: "prob"
 }
 
 layer {

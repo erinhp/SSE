@@ -2,22 +2,17 @@ name: "SSE-resnet-50_test"
 
 layer {
   name: "data"
-  type: "Data"
+  type: "ImageData"
   top: "data"
   top: "label"
-  include {
-    phase: TEST
-  }
   transform_param {
     mirror: false
     crop_size: 0
-    mean_file: "/home/caidongqi/caffe/models/EmotiW2017/ResNet_mean.binaryproto"
+    mean_file: "models/EmotiW2017/ResNet_mean.binaryproto"
   }
-  data_param {
-    source:"/home/caidongqi/caffe/examples/EmotiW2017/EmotiW2017_lmdb_val4test"
-	#source: "/home/caidongqi/caffe/examples/EmotiW2017/EmotiW2017_test_lmdb2"
+  image_data_param {
+    source:"data/Emoti2017/EmotiW_3_norm/test_file_list.txt"
     batch_size: 29
-    backend: LMDB
   }
 }
 
