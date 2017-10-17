@@ -30,7 +30,7 @@ If you find SSE useful in your research, please consider citing:
 ``` 
     git clone https://github.com/erinhp/SSE.git
 ```
-1. Build Caffe and pycaffe, it can be dowonload from [here](https://github.com/BVLC/caffe/) 
+1. Build Caffe and pycaffe, it can be download from [here](https://github.com/BVLC/caffe/) 
 ```
    cd $ROOT/caffe
    # Now follow the Caffe installation instructions here:
