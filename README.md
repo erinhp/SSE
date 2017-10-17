@@ -19,7 +19,7 @@ If you find SSE useful in your research, please consider citing:
   ResNet-50 | 41.7755 | \ | \ | \ | 42.5587
   
 ## Recognition accuracy of our best submission to Emotion Challenge 2017   
-  For the best submition to Emotion in the wild Challenge 2017, We fused the results on test set from five models. In folder `submitted_predictions_emotiw2107`, you can find the corresponding predictions for each model and ensemble predictions. We also provide test video list for evaluation.  
+  For the best submition to Emotion in the wild Challenge 2017, We fused the results on test set from five models. In folder `submitted_predictions_emotiw2107`, you can find the corresponding predictions for each model and ensemble predictions. We also provide test video list for evaluation.     
   Validation(%) | Test(%) |	Methods
   ------------- | ------------- | -------------
   59.01 | 60.34 | 7th Fusion of 1 SSE-ResNet + 1 SSE-DenseNet + 1 SSE-HoloNet + 1 hand-crafted model + 1 audio model
