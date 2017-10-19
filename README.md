@@ -53,7 +53,7 @@ If you find SSE useful in your research, please consider citing:
    cd leveldb2mat/ && python leveldb2mat.py ../../examples/sse_holonet_features/ 46 128 7 features.mat
 ```
 4. Train SSE with Emotion Challenge Dataset  
-   Train a SSE learning Strategy network. Here is the codes in `train_SSE_XXX.sh`. For example, train SSE-HoloNet on Emotion Challange train dataset. To train SSE-DenseNet or SSE-ResNet, you can finetune with their original pretrained models from: [ResNet_50](https://github.com/KaimingHe/deep-residual-networks), [DenseNet_121](https://github.com/shicai/DenseNet-Caffe). 
+   Train an SSE learning Strategy network. Here is the codes in `train_SSE_XXX.sh`. For example, train SSE-HoloNet on Emotion Challange train dataset. To train SSE-DenseNet or SSE-ResNet, you can finetune with their original pretrained models from: [ResNet_50](https://github.com/KaimingHe/deep-residual-networks), [DenseNet_121](https://github.com/shicai/DenseNet-Caffe). 
 ```Java
     ./build/tools/caffe train \
     --solver = script/SSE-HoloNet/SSE_holonet_train_solver.prototxt
